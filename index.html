@@ -1,86 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
- <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Ashish Mishra | Data Science & AI Engineer</title>
 
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css">
 
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
 
+  <!-- AOS -->
+  <link
+    href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+    rel="stylesheet"
+  />
 </head>
+
+<script>
+  function scrollProjects(direction) {
+    const slider = document.getElementById("projectsSlider");
+    const scrollAmount = 380; // card width + gap
+
+    slider.scrollBy({
+      left: direction * scrollAmount,
+      behavior: "smooth"
+    });
+  }
+</script>
+
 
 <body>
 
+  <!-- HEADER -->
   <header>
-    <h1>Ashish Mishra</h1>
+    <h1>Ashish's Portfolio <span style="color:#00fff7;">.</span></h1>
     <nav>
       <a href="#about">About</a>
+      <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section id="hero" data-aos="fade-up">
-    <div class="hero-content">
-      <h1><span id="intro-text"></span><span class="cursor">|</span></h1>
-      <h1></h1>
-      <p>
-        A passionate AI Engineer and full-stack developer with a love for turning ideas into intelligent digital
-        products. I build smart systems like voice assistants, face recognition tools, and AI-powered web apps using
-        technologies like Python, OpenCV, JavaScript, and OpenAI.
-        <br><br>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content" data-aos="fade-up">
+      <h1>
+        <span id="intro-text"></span><span class="cursor">|</span>
+      </h1>
 
+      <p>
+        Data Science & AI Engineer specializing in Machine Learning, Computer Vision,
+        and production-ready AI systems. Experienced in building face recognition,
+        recommender systems, and intelligent applications using Python and modern ML frameworks.
       </p>
 
+      <div style="margin-top:30px;">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="Ashish Resume.pdf" class="btn" download>Download Resume</a>
+      </div>
     </div>
   </section>
 
-
-
-
-
-
-  <div class="resume">
-    <a href="Ashish Resume.pdf" download class="btn resume-btn" download>Download Resume</a>
-
-  </div>
-
-  <section class="about" id="about" data-aos="fade-right">
+  <!-- ABOUT -->
+  <section id="about" class="about" data-aos="fade-right">
     <h2>About Me</h2>
-    <p>I’m an enthusiastic developer with a strong interest in AI, frontend design, and smart assistant systems. I enjoy
-      building responsive websites and smart applications.</p>
+    <p>
+      I am a results-driven Data Science professional with strong expertise in
+      Machine Learning, Computer Vision, and AI model development.
+      I have hands-on experience building production-ready systems such as
+      face detection & recognition and recommendation engines.
+      I am passionate about transforming data into actionable insights and
+      developing scalable AI solutions.
+    </p>
   </section>
 
-  <section id="skills">
-    <h2>My Skills</h2>
+  <!-- EXPERIENCE -->
+  <section id="experience" data-aos="fade-up">
+    <h2>Experience</h2>
 
-    <div class="skill">
-      <span>HTML</span>
-      <div class="progress-bar">
-        <div class="progress-fill html"></div>
-      </div>
-    </div>
+    <div class="project-card">
+      <h3>AI & Machine Learning Intern</h3>
+      <p><strong>Central Tool Room & Training Center (CTTC), Bhubaneswar</strong></p>
+      <p><em>April 2025 – June 2025</em></p>
 
-    <div class="skill">
-      <span>CSS</span>
-      <div class="progress-bar">
-        <div class="progress-fill css"></div>
-      </div>
+      <ul style="text-align:left; margin-top:15px; line-height:1.8;">
+        <li>Developed real-time face detection & recognition system using OpenCV and deep learning with <strong>95%+ accuracy</strong></li>
+        <li>Implemented advanced image processing pipelines including preprocessing, feature extraction, and data augmentation</li>
+        <li>Optimized ML models for production deployment, reducing inference time by <strong>40%</strong></li>
+        <li>Collaborated with cross-functional teams to integrate AI solutions into scalable systems</li>
+      </ul>
     </div>
+  </section>
 
-    <div class="skill">
-      <span>JavaScript</span>
-      <div class="progress-bar">
-        <div class="progress-fill js"></div>
-      </div>
-    </div>
+  <!-- SKILLS -->
+  <section id="skills" data-aos="fade-up">
+    <h2>Technical Skills</h2>
 
     <div class="skill">
       <span>Python</span>
@@ -88,111 +112,184 @@
         <div class="progress-fill python"></div>
       </div>
     </div>
+
     <div class="skill">
-      <span>Artificial Intelligence</span>
+      <span>SQL</span>
       <div class="progress-bar">
-        <div class="progress-fill html"></div>
+        <div class="progress-fill css"></div>
       </div>
     </div>
+
     <div class="skill">
       <span>Machine Learning</span>
       <div class="progress-bar">
         <div class="progress-fill html"></div>
       </div>
     </div>
-  </section>
 
-  <section class="projects" id="projects" data-aos="zoom-in">
-    <h2>Projects</h2>
-    <div class="project">
-      <img src="dreamstime_m_137534981-1024x661.jpg" alt="Face Recognition System">
-      <h3>Face Recognition System</h3>
-      <p>This project uses computer vision and machine learning to detect and recognize human faces using OpenCV and
-        Python. It's ideal for attendance, access control, and surveillance systems.</p>
-      <div class="project-links">
-        <a href="https://github.com/yourusername/face-recognition-system" target="_blank" class="btn">Source Code</a>
-        <a href="https://your-live-demo-link.com" target="_blank" class="btn">Live Demo</a>
+    <div class="skill">
+      <span>Deep Learning (TensorFlow, Keras, PyTorch)</span>
+      <div class="progress-bar">
+        <div class="progress-fill js"></div>
       </div>
     </div>
 
-    <div class="grid">
-      <div class="project">
-        <img src="shutterstock_753054454.jpg" alt="Project 1" />
-        <h3>Smart Voice Assistant</h3>
-        <p>Voice-controlled assistant with ChatGPT integration, weather, reminders, and more.</p>
-      </div>
-      <div class="project">
-        <img src="Generative.png" alt="Project 2" />
-        <h3>AI Portfolio Generator</h3>
-        <p>A tool that helps users create portfolios using AI prompts and templates.</p>
+    <div class="skill">
+      <span>Computer Vision (OpenCV)</span>
+      <div class="progress-bar">
+        <div class="progress-fill html"></div>
       </div>
     </div>
-    
+
+    <div class="skill">
+      <span>Data Analysis & Visualization (Pandas, NumPy, Power BI, Tableau)</span>
+      <div class="progress-bar">
+        <div class="progress-fill css"></div>
+      </div>
+    </div>
   </section>
 
-  <section class="contact" id="contact" data-aos="fade-up">
+  <!-- PROJECTS -->
+<section id="projects" class="projects" data-aos="zoom-in">
+  <h2>Projects</h2>
+
+  <div class="projects-wrapper">
+
+    <!-- Left Arrow -->
+    <button class="arrow left" onclick="scrollProjects(-1)">
+      ❮
+    </button>
+
+    <!-- Slider -->
+    <div class="projects-slider" id="projectsSlider">
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="images/face-recognition.jpg" alt="Face Recognition">
+        <h3>Face Detection & Recognition System</h3>
+        <p>
+          End-to-end facial recognition system using CNNs, OpenCV and deep learning.
+          Achieved <strong>95%+ accuracy</strong> with real-time detection.
+        </p>
+        <div class="project-links">
+          <a href="#" class="btn">Source Code</a>
+          <a href="#" class="btn">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="images/movie-recommender.jpg" alt="Movie Recommender">
+        <h3>Movie Recommender System</h3>
+        <p>
+          Content-based and collaborative filtering system using Python and Scikit-learn
+          on 10,000+ movies dataset.
+        </p>
+        <div class="project-links">
+          <a href="#" class="btn">Source Code</a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <img src="images/ai-chatbot.jpg" alt="AI Chatbot">
+        <h3>AI Chatbot</h3>
+        <p>
+          NLP-based intelligent chatbot with Flask backend and
+          <strong>90% intent recognition accuracy</strong>.
+        </p>
+        <div class="project-links">
+          <a href="#" class="btn">Source Code</a>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card">
+        <img src="images/chat-app.jpg" alt="Chat Application">
+        <h3>Real-Time Chat Application</h3>
+        <p>
+          Real-time chat app with authentication and one-to-one messaging.
+          Built using modern web technologies for fast, secure communication.
+        </p>
+        <div class="project-links">
+          <a href="#" class="btn">Source Code</a>
+          <a href="#" class="btn">Live Demo</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right Arrow -->
+    <button class="arrow right" onclick="scrollProjects(1)">
+      ❯
+    </button>
+
+  </div>
+</section>
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact" data-aos="fade-up">
     <h2>Contact Me</h2>
+
     <form action="https://formsubmit.co/ashishbnm4@gmail.com" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <div class="social-icons" style="margin: 20px 0;">
-      <a href="https://github.com/yourgithub" target="_blank" style="margin: 0 10px; color: #fff; font-size: 20px;">
+    <div class="social-icons">
+      <a href="https://github.com/ashishbnm4" target="_blank">
         <i class="fab fa-github"></i>
       </a>
-      <a href="https://linkedin.com/in/https://www.linkedin.com/in/ashishmishra97" target="_blank"
-        style="margin: 0 10px; color: #fff; font-size: 20px;">
+      <a href="https://linkedin.com/in/ashishmishra97" target="_blank">
         <i class="fab fa-linkedin"></i>
       </a>
-      <a href="https://twitter.com/yourtwitter" target="_blank" style="margin: 0 10px; color: #fff; font-size: 20px;">
-        <i class="fab fa-twitter"></i>
-      </a>
       <a href="https://instagram.com/__ashishmishra_" target="_blank">
-  <i class="fab fa-instagram"></i>
-</a>
-
+        <i class="fab fa-instagram"></i>
+      </a>
     </div>
-    <p>© 2025 Ashish | All Rights Reserved</p>
+    <p>📍 Bhilwara, Rajasthan, India</p>
+    <p>© 2025 Ashish Mishra | Data Science & AI Engineer</p>
   </footer>
 
+  <!-- MATRIX BACKGROUND -->
+  <canvas id="matrix-bg"></canvas>
 
+  <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
+    AOS.init({ duration: 1000, once: true });
   </script>
 
+  <!-- TYPE EFFECT -->
   <script>
-    const textElement = document.getElementById("intro-text");
-    const text = "Hello, I'm Ashish, a passionate AI Engineer and Full Stack Developer.";
+    const text = "Hello, I'm Ashish Mishra, a Data Science & AI Engineer.";
     const words = text.split(" ");
     let index = 0;
+    const el = document.getElementById("intro-text");
 
-    function showNextWord() {
+    function typeEffect() {
       if (index < words.length) {
-        textElement.innerHTML += words[index] + " ";
+        el.innerHTML += words[index] + " ";
         index++;
-        setTimeout(showNextWord, 300); // speed of typing (in ms)
+        setTimeout(typeEffect, 250);
       }
     }
-
-    showNextWord();
+    typeEffect();
   </script>
-  <canvas id="matrix-bg"></canvas>
+
+  <!-- MATRIX EFFECT -->
   <script>
     const canvas = document.getElementById("matrix-bg");
     const ctx = canvas.getContext("2d");
 
-    canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
     const letters = "01";
     const fontSize = 14;
@@ -200,28 +297,20 @@
     const drops = Array(Math.floor(columns)).fill(1);
 
     function drawMatrix() {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      ctx.fillStyle = "rgba(0,0,0,0.05)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = "#0f0"; // Matrix green
+      ctx.fillStyle = "#00fff7";
       ctx.font = fontSize + "px monospace";
 
-      for (let i = 0; i < drops.length; i++) {
-        const text = letters[Math.floor(Math.random() * letters.length)];
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-        if (drops[i] * fontSize > canvas.height || Math.random() > 0.95) {
-          drops[i] = 0;
-        }
-        drops[i]++;
-      }
+      drops.forEach((y, i) => {
+        const char = letters[Math.floor(Math.random() * letters.length)];
+        ctx.fillText(char, i * fontSize, y * fontSize);
+        drops[i] = y * fontSize > canvas.height && Math.random() > 0.95 ? 0 : y + 1;
+      });
     }
 
     setInterval(drawMatrix, 50);
-
-    
-
   </script>
 
 </body>
-
 </html>
